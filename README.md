@@ -8,4 +8,4 @@ font colour can also be changed.
 Screenshots
 -----------------------------------
 
-<img src="/screenshots/text_editing_screenshot.png" alt="Text Editing Screenshot" width="20%"/>
+<img src="/screenshots/text_editing_screenshot.png" alt="Text Editing Screenshot" width="50%"/>
