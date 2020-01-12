@@ -3,7 +3,7 @@ Writer
 
 A Java application for editing text files. Text files can be opened, edited and saved. The font size and font colour can also be changed. The GUI was created using Swing.
 
-To run the program either import the project into IntelliJ or run the Writer.jar file in the 'out' folder
+To run the program either import the project into IntelliJ or run the Writer.jar file in the 'out/artifacts' folder
 
 Screenshots
 -----------------------------------
