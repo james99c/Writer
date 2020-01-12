@@ -1,5 +1,6 @@
 package com.jameschamberlain.writer;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.SimpleAttributeSet;
@@ -87,10 +88,16 @@ class View {
 
 
             // Frame maintenance
-            ImageIcon img = new ImageIcon("src/main/resources/icon.png");
-            frame.setIconImage(img.getImage());
-            frame.pack();
-            frame.setVisible(true);
+            try {
+                ImageIcon img = new ImageIcon(ImageIO.read(ClassLoader.getSystemResource("icon.png")));
+                frame.setIconImage(img.getImage());
+                frame.pack();
+                frame.setVisible(true);
+            }
+            catch (IOException e) {
+                System.out.println("Couldn't find image");
+            }
+
         };
         SwingUtilities.invokeLater(r);
     }
@@ -182,6 +189,7 @@ class View {
                 JOptionPane.showMessageDialog(frame, "Couldn't open file");
             }
             try {
+                assert reader != null;
                 String line = reader.readLine();
                 StringBuilder text = new StringBuilder();
                 while (line != null) {
